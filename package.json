@@ -1,7 +1,7 @@
 {
-  "name": "@waleedshoaib/smart-env-manager",
+  "name": "smart-env-manager-ws",
   "version": "0.1.0",
-  "description": "A TypeScript-first environment variable manager with validation, type safety, and advanced features",
+  "description": "A TypeScript-first environment variables manager with validation and type safety",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -11,14 +11,9 @@
   ],
   "scripts": {
     "build": "tsc",
-    "test": "vitest",
-    "dev": "tsc -w",
-    "lint": "eslint src --ext .ts",
-    "format": "prettier --write \"src/**/*.ts\"",
-    "example:basic": "ts-node examples/basic-usage.ts",
-    "example:advanced": "ts-node examples/advanced-usage.ts",
-    "prepublishOnly": "npm run build && npm test",
-    "prepare": "npm run build"
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
   },
   "keywords": [
     "env",
@@ -39,7 +34,17 @@
     "url": "https://github.com/waleedshoaib2/smart-env-manager/issues"
   },
   "homepage": "https://github.com/waleedshoaib2/smart-env-manager#readme",
-  "publishConfig": {
-    "access": "public"
+  "dependencies": {
+    "dotenv": "^16.4.1",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.16",
+    "@vitest/coverage-v8": "^1.2.2",
+    "@vitest/ui": "^1.2.2",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.12",
+    "vite-tsconfig-paths": "^4.3.1",
+    "vitest": "^1.2.2"
   }
 }
