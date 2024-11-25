@@ -1,0 +1,61 @@
+{
+  "name": "@waleedshoaib/smart-env-manager",
+  "version": "0.1.0",
+  "description": "A TypeScript-first environment variable manager with validation, type safety, and advanced features",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest",
+    "dev": "tsc -w",
+    "lint": "eslint src --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "example:basic": "ts-node examples/basic-usage.ts",
+    "example:advanced": "ts-node examples/advanced-usage.ts",
+    "prepare": "husky install",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "env",
+    "environment",
+    "typescript",
+    "config",
+    "dotenv",
+    "validation",
+    "type-safe"
+  ],
+  "author": "Waleed Shoaib",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/waleedshoaib2/smart-env-manager.git"
+  },
+  "bugs": {
+    "url": "https://github.com/waleedshoaib2/smart-env-manager/issues"
+  },
+  "homepage": "https://github.com/waleedshoaib2/smart-env-manager#readme",
+  "dependencies": {
+    "dotenv": "^16.4.1",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.16",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "husky": "^9.0.10",
+    "prettier": "^3.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
