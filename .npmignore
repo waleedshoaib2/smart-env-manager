@@ -1,0 +1,10 @@
+src/
+examples/
+tests/
+.git/
+.github/
+.gitignore
+.eslintrc
+.prettierrc
+tsconfig.json
+*.log
